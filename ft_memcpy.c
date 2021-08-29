@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 02:08:29 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/16 12:57:52 by towatana         ###   ########.fr       */
+/*   Updated: 2021/07/23 17:55:05 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	i = 0;
 	d = dst;
 	s = src;
+	i = 0;
 	while (i < n)
 	{
 		d[i] = s[i];

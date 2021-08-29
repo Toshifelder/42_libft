@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 02:08:57 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/16 12:57:43 by towatana         ###   ########.fr       */
+/*   Updated: 2021/07/28 07:02:20 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int	ft_atoi(const char *str)
 	long	to_int;
 
 	i = 0;
-	while (str[i] == ' ' || ('\t' == str[i] && str[i] == '\r'))
+	while (str[i] == ' ' || ('\t' <= str[i] && str[i] <= '\r'))
 		i++;
 	sign_cnt = 1;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign_cnt = -1;
+			sign_cnt *= -1;
 		i++;
 	}
 	to_int = 0;

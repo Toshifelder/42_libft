@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/16 02:08:55 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/30 06:42:56 by towatana         ###   ########.fr       */
+/*   Created: 2021/07/17 05:46:29 by towatana          #+#    #+#             */
+/*   Updated: 2021/08/21 01:40:05 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	haystack_len;
-	size_t	needle_len;
+	char	*sub_s;
+	size_t	sub_s_len;
 
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	haystack_len = ft_strlen(haystack);
-	needle_len = ft_strlen(needle);
-	if (needle_len > haystack_len)
+	if (s == NULL)
 		return (NULL);
-	i = 0;
-	while (i + needle_len <= len)
-	{
-		if (ft_strncmp(&haystack[i], needle, needle_len) == 0)
-			return ((char *)&haystack[i]);
-		i++;
-	}
-	return (NULL);
+	if (start >= ft_strlen(s) || len == 0)
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start < len)
+		sub_s_len = ft_strlen(s) - start;
+	else
+		sub_s_len = len;
+	sub_s = malloc(sizeof(char) * (sub_s_len + 1));
+	if (sub_s == NULL)
+		return (NULL);
+	ft_strlcpy(sub_s, &s[start], sub_s_len + 1);
+	return (sub_s);
 }
