@@ -6,11 +6,27 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 02:08:54 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/16 12:57:43 by towatana         ###   ########.fr       */
+/*   Updated: 2021/09/06 21:08:28 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// int	ft_memcmp(const void *s1, const void *s2, size_t size)
+// {
+// 	const unsigned char	*p1;
+// 	const unsigned char	*p2;
+// 	size_t				i;
+
+// 	p1 = s1;
+// 	p2 = s2;
+// 	i = 0;
+// 	while (p1[i] == p2[i] && i < size)
+// 		i++;
+// 	if (i == size)
+// 		return (0);
+// 	return ((int)(p1[i] - p2[i]));
+// }
 
 int	ft_memcmp(const void *s1, const void *s2, size_t size)
 {
@@ -18,12 +34,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t size)
 	const unsigned char	*p2;
 	size_t				i;
 
-	p1 = s1;
-	p2 = s2;
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
 	i = 0;
-	while (p1[i] == p2[i] && i < size)
+	while (i < size)
+	{
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
 		i++;
-	if (i == size)
-		return (0);
-	return (p1[i] - p2[i]);
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 02:08:57 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/28 07:02:20 by towatana         ###   ########.fr       */
+/*   Updated: 2021/09/07 00:53:18 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int		i;
-	int		sign_cnt;
+	int	sign_cnt;
 	long	to_int;
 
 	i = 0;
@@ -32,6 +32,10 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(str[i]))
 	{
 		to_int = to_int * 10 + (str[i] - '0');
+		if (to_int > 2147483647 && sign_cnt == 1)
+			return (-1);
+		if (to_int > 2147483648 && sign_cnt == -1)
+			return (0);
 		i++;
 	}
 	return (sign_cnt * to_int);

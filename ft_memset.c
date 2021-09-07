@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 02:08:25 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/23 17:55:10 by towatana         ###   ########.fr       */
+/*   Updated: 2021/09/06 21:35:42 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		p[i] = c;
+		*p++ = c;
 		i++;
 	}
 	return (b);
