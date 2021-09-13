@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 02:08:57 by towatana          #+#    #+#             */
-/*   Updated: 2021/09/07 00:53:18 by towatana         ###   ########.fr       */
+/*   Updated: 2021/09/13 17:50:36 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int		i;
-	int	sign_cnt;
+	int		sign_cnt;
 	long	to_int;
 
 	i = 0;
