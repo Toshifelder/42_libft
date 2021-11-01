@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 16:55:35 by towatana          #+#    #+#             */
-/*   Updated: 2021/09/12 03:57:11 by towatana         ###   ########.fr       */
+/*   Created: 2021/11/01 17:46:03 by towatana          #+#    #+#             */
+/*   Updated: 2021/11/01 17:46:04 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	handle_negative(int	n)
+static int	handle_negative(int	n)
 {
 	if (n < 0)
 		return (-n);
@@ -20,7 +20,7 @@ int	handle_negative(int	n)
 		return (n);
 }
 
-int	get_digits(int n)
+static int	get_digits(int n)
 {
 	int	digits;
 

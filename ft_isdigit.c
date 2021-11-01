@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/16 02:08:17 by towatana          #+#    #+#             */
-/*   Updated: 2021/07/16 12:57:47 by towatana         ###   ########.fr       */
+/*   Created: 2021/11/01 17:42:05 by towatana          #+#    #+#             */
+/*   Updated: 2021/11/01 17:42:14 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

@@ -45,20 +45,20 @@ PART2 += ft_putstr_fd.c
 PART2 += ft_putendl_fd.c
 PART2 += ft_putnbr_fd.c
 
-# BONUS += ft_lstnew.c
-# BONUS += ft_lstadd_front.c
-# BONUS += ft_lstsize.c
-# BONUS += ft_lstlast.c
-# BONUS += ft_lstadd_back.c
-# BONUS += ft_lstdelone.c
-# BONUS += ft_lstclear.c
-# BONUS += ft_lstiter.c
-# BONUS += ft_lstmap.c
+BONUS += ft_lstnew.c
+BONUS += ft_lstadd_front.c
+BONUS += ft_lstsize.c
+BONUS += ft_lstlast.c
+BONUS += ft_lstadd_back.c
+BONUS += ft_lstdelone.c
+BONUS += ft_lstclear.c
+BONUS += ft_lstiter.c
+BONUS += ft_lstmap.c
 
 all: $(NAME)
 
 %.o:%.c
-	$(CC) $(CFLAGS) $(INCLUDE) -o $@ -c $<
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
