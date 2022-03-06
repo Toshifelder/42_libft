@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:47:19 by towatana          #+#    #+#             */
-/*   Updated: 2021/11/01 17:47:20 by towatana         ###   ########.fr       */
+/*   Updated: 2022/03/07 02:30:03 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
-	*lst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:43:24 by towatana          #+#    #+#             */
-/*   Updated: 2021/11/01 17:43:25 by towatana         ###   ########.fr       */
+/*   Updated: 2022/03/04 04:11:50 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t				i;
-	unsigned char		*d;
 	const unsigned char	*s;
+	unsigned char		*d;
 
 	if (!dst && !src)
 		return (NULL);
-	d = dst;
 	s = src;
-	i = 0;
-	while (i < n)
-	{
+	d = dst;
+	while (n--)
 		*d++ = *s++;
-		i++;
-	}
 	return (dst);
 }

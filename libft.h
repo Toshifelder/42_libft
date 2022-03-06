@@ -6,14 +6,12 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:47:35 by towatana          #+#    #+#             */
-/*   Updated: 2021/11/01 17:47:36 by towatana         ###   ########.fr       */
+/*   Updated: 2022/03/06 03:00:12 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <stdio.h>
 
 # include <unistd.h>
 # include <stdlib.h>

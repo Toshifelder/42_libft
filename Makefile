@@ -62,11 +62,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	# gcc -o ${NAME} ${OBJS}
-	# gcc -g ${OBJS}
-	# gcc -g -fsanitize=address ${OBJS}
-	# gcc -g -fsanitize=undefined ${OBJS}
-	# gcc -g -fsanitize=leak ${OBJS}
 clean:
 	$(RM) $(OBJS)
 

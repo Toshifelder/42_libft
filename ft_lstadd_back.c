@@ -6,7 +6,7 @@
 /*   By: towatana <towatana@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:47:11 by towatana          #+#    #+#             */
-/*   Updated: 2021/11/01 17:47:12 by towatana         ###   ########.fr       */
+/*   Updated: 2022/03/07 01:12:47 by towatana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	last = ft_lstlast(*lst);
-	new->next = last->next;
 	last->next = new;
 }
